@@ -7,12 +7,12 @@ $c = true;
 if ( $method === 'POST' ) {
 	// if ($_POST['check'] != 'secretcode') exit();
 
-	$project_name = "OlimpDecor";
-	$admin_email  = "Sergsergv@yandex.ru";
-	$form_subject = "Заявка с сайта";
+	$project_name = "Saulers";
+	$admin_email  = "demon101k@gmail.com";
+	$form_subject = $_POST['Тема'];
 
 	foreach ( $_POST as $key => $value ) {
-		if ( $value != "" && $key != "project_name" && $key != "admin_email" && $key != "form_subject" ) {
+		if ( $value != "" && $key != "project_name" && $key != "admin_email" && $key != "Тема" ) {
 			if ($key == "Name") $key = "Имя";
 			if ($key == "Phone") $key = "Телефон";
 			if ($key == "check") continue;

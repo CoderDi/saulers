@@ -30,6 +30,12 @@
     </g>
   </svg>
 
+  <svg viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g id="arrow-review" class="img">
+      <path d="M7 13L1 7L7 1" stroke="#6360FD" stroke-linecap="square" stroke-linejoin="round"/>
+    </g>
+  </svg>
+
   <svg viewBox="0 0 58 66" fill="none" xmlns="http://www.w3.org/2000/svg">
     <g id="video-arrow" class="img">
       <path d="M0.836824 0.656317L57.3118 33.2622L0.836824 65.8681L0.836824 0.656317Z" fill="white"/>

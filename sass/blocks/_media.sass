@@ -1,4 +1,564 @@
-@media screen and (max-width: 100px)
-  html
-    font-size: 12px
+@media screen and (max-width: 1350px)
+  .review
+    &s
+      &-slider
+        .slick
+          &-arrow
+            display: none !important
+  .banner
+    &-plash
+      &2
+        left: 200px
+        top: 460px
+      &1
+        left: 50px
+        top: 140px
+  .site
+    &::before
+      min-width: 0
+
+@media screen and (max-width: 1170px)
+  .banner
+    padding-top: 60px
+    &-plash
+      width: 30%
+      text-align: center
+      position: relative
+      top: 0
+      left: 0
+      transform: none
+      &es
+        align-items: flex-start
+        display: flex
+        justify-content: space-around
+      &2 &-content
+        padding-bottom: 20px
+      &-content
+        &-outer
+          top: calc(100% - 20px)
+          left: 10px
+          width: calc(100% - 20px)
+    &-title
+      font-size: 40px
+      line-height: 50px
+      margin-bottom: 20px
+      &-sub
+        font-size: 18px
+        line-height: 24px
+      &-underline::before
+        height: 20px
+        bottom: -3px
+    &-btn
+      order: 3
+    &-img
+      left: 0
+      width: 100%
+      max-width: 350px
+      height: auto
+  .program
+    &-title
+      font-size: 48px
+    &-item
+      &-container
+        padding: 30px
+      &-top
+        font-size: 14px
+        line-height: 18px 
+        b
+          font-size: 20px
+      &-text
+        font-size: 14px
+        line-height: 18px
+      &-last
+        &-text
+          font-size: 14px
+          line-height: 18px
+          b
+            font-size: 20px
+  .wrapper
+    padding: 0 16px
+  .reviews
+    &-wrapper
+      padding: 0
+
+  
+@media screen and (max-width: 980px)
+  .header
+    &-menu
+      display: none
+  .banner
+    &-img
+      width: 220px
+    &-btn
+      background: linear-gradient(91.55deg, #6360FD 12.81%, #3E3BE2 100%);
+      border: none
+      color: #fff
+      margin-bottom: 48px
+  .site
+    background: url(../images/cep.png) no-repeat left 814px, url(../images/program-bg2.png) no-repeat right 688px;
+  .program
+    &-item
+      &-first
+        padding: 20px 30px
+    &-title
+      font-size: 36px
+      line-height: 1.3
+  .author
+    &-wrapper
+      flex-wrap: wrap
+    &-name
+      display: none
+      &-mobile
+        width: 100%
+        display: block
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 32px;
+        text-align: center;
+        color: #8CD2DD;
+        opacity: 0.4;
+    &-img
+      margin: 0 auto
+    &-bg
+      left: 50%
+      transform: translateX(-50%)
+    &-content
+      padding-top: 120px
+      width: 100%
+  .reviews2
+    &-slide1-container
+      font-size: 14px
+      line-height: 18px
+      b
+        font-size: 20px
+    &-next
+      top: 0
+  .form
+    &-flex
+      flex-wrap: wrap
+    &-content
+      order: -1
+      width: 100%
+    &-block
+      margin: 30px auto 0
+  .footer
+    &-logo
+      height: 13px
+      margin-bottom: 9px
+      img
+        height: 100%
+        width: auto
+    &-contacts
+      padding: 0 20px
+    &-phone
+      font-size: 18px
+      line-height: 1
+      white-space: nowrap
+
+
+@media screen and (max-width: 767px)
+  .site
+    background: none
+  .banner
+    padding-bottom: 0
+    &-plash
+      width: 100%
+      max-width: 400px
+      margin-bottom: 24px
+      &es
+        flex-wrap: wrap
+      &2
+        margin-bottom: 90px
+  .program
+    padding-top: 100px
+    margin-top: -32px
+    background: url(../images/program-mobile-top.png) no-repeat top right, url(../images/program-mobile-mid.png) no-repeat center 450px
+    &-item
+      width: 100%  
+  .tarif
+    &s
+      &-container
+        border-radius: 34px
+        padding: 65px 0
+      &-title
+        font-size: 28px;
+        line-height: 32px;
+        margin-bottom: 23px
+      &-list
+        flex-wrap: wrap
+        margin: 0 auto
+        max-width: 400px
+    &1
+      width: 100%
+      margin-bottom: 70px
+    &2
+      width: 100%
+      margin: 0
+      &-ps
+        color: #FFFFFF;
+        opacity: 0.4
+        font-size: 14px
+  .author
+    &::after
+      position: absolute
+      left: 0
+      bottom: -260px
+      width: 600px
+      height: 600px
+      z-index: -1
+      background: url(../images/author-mobile-bg.png) no-repeat bottom left/contain
+      content: ''
+    &-wrapper
+      padding-top: 105px
+      padding-bottom: 45px
+    &-shape
+      opacity: 0.3
+      &1
+        top: 0
+        left: 50%
+        width: 616px
+        height: 616px
+        transform: translateX(-50%)
+      &2
+        top: 50px
+        left: 50%
+        width: 492px
+        height: 492px
+        transform: translateX(-50%)
+    &-name
+      &-mobile
+        max-width: 320px
+        text-align: center
+        margin: 0 auto
+  .reviews
+    &-title
+      font-size: 28px;
+      line-height: 32px;
+      span::before
+        bottom: -1px
+    &2
+      &-container
+        display: block
+      &-next
+        display: none
+      &-slider
+        &1
+          width: 100%
+          &-coin
+            width: 85px
+            height: 68px
+            right: -16px
+
+            top: -55px
+        &2
+          width: 250px
+          margin: 0 auto
+          .slick
+            &-arrow
+              border: none
+              background-size: 15px 25px
+            &-prev
+              left: -50px
+            &-next
+              right: -50px
+      &-bg
+        width: 457px
+        height: 475px
+        bottom: -100px
+        top: auto
+        left: 50%
+        right: auto
+        transform: translateX(-50%)
+  .form
+    &-content
+      font-size: 14px;
+      line-height: 20px;
+      h3
+        margin-bottom: 28px
+        font-size: 24px;
+        line-height: 24px;
+    &-block
+      width: 100%
+      padding: 45px 16px 25px
+      &::before
+        width: 16px
+        height: 16px
+        top: 24px
+        right: 32px
+    &-coin
+      width: 90px
+      height: 90px
+      left: 8px
+      top: -50px
+      right: auto
+      transform: rotate(-45deg)
+    &-title
+      margin-bottom: 23px
+      font-size: 20px;
+      line-height: 28px;
+    &-ps
+      font-size: 10px;
+      line-height: 16px;
+
+  .input
+    height: 56px
+    margin-bottom: 8px
+
+  .submit
+    margin-top: 16px
+
+  .label
+    &-span
+      top: 20px
+
+  .footer
+    &-flex
+      flex-wrap: wrap
+    &-right
+      width: 100%
+      text-align: left
+      display: flex
+      flex-wrap: wrap
+      justify-content: center
+    &-politic
+      order: 3
+      margin-bottom: 0
+      font-size: 10px;
+      line-height: 12px;
+    &-phone
+      font-size: 14px;
+      line-height: 21px;
+    &-mail
+      font-size: 11px;
+      line-height: 15px;
+    &-logo
+      &-block
+        width: 50%
+      &-text
+        font-size: 8px;
+        line-height: 10px;
+      &-ps
+        display: none
+        &2
+          display: block
+          text-align: center
+          margin-top: 12px
+          font-weight: 400;
+          font-size: 10px;
+          line-height: 12px;
+          width: 100%
+          color: #000000;
+          order: 5
+    &-socials
+      justify-content: flex-end
+      .socials-item
+        width: 32px
+        height: 32px
+        margin-right: 0
+        margin-left: 8px
+    &-contacts
+      width: 50%
+      padding: 0
+      text-align: right
+    &-data
+      font-size: 8px;
+      line-height: 12px;
+      width: 100%
+      margin-bottom: 28px
+    &-bg
+      background-size: 100% 100%
+      min-width: 0
+      height: 400px
+
+
+@media screen and (max-width: 480px)
+  .header
+    &-logo
+      display: block
+      width: 96px
+      height: 13px
+      img
+        display: block
+        width: 100%
+        height: 100%
+    &-socials
+      display: none
+    &-contacts
+      position: relative
+      top: -5px
+    &-wrapper
+      align-items: flex-start
+    &-phone
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 21px;
+    &-mail
+      position: relative
+      top: -4px
+      font-size: 11px;
+      line-height: 15px;
+  .site
+    &::before
+      height: 190px
+      background-size: 100% 100%
+  .banner
+    &-title
+      margin: 0
+      font-size: 28px;
+      line-height: 32px;
+      &-underline::before
+        height: 16px
+      &-sub
+        margin-bottom: 17px
+        font-size: 16px;
+        line-height: 23px;
+    &-img
+      margin-top: -20px
+    &-btn
+      height: 72px
+      font-size: 16px;
+      line-height: 24px;
+      padding: 0
+      width: 100%
+      max-width: 360px
+    &-shape 
+      &3
+        width: 260px
+        height: 103px
+        top: 200px
+      &4
+        width: 19px
+        height: 19px
+        right: 34px
+        left: auto
+        top: 100px
+      &5
+        display: none
+      &2
+        width: 495px
+        height: 495px
+        top: -116px
+      &1
+        width: 665px
+        height: 665px
+        top: -200px
+  .program
+    &-shape
+      &3
+        width: 16px
+        height: 16px
+        left: 16px
+        top: 0
+      &4
+        bottom: 0
+        top: auto
+        left: 0
+      &2
+        display: none
+    &-title
+      text-align: center
+      font-size: 28px;
+      line-height: 32px;
+      span::before
+        height: 10px
+    &-item
+      &-container
+        padding: 24px
+      &-num
+        display: none
+      &-btn
+        width: 36px
+        height: 36px
+      &-top
+        padding-right: 40px
+        font-size: 14px;
+        line-height: 16px;
+        b
+          font-weight: 600
+          font-size: 20px;
+          line-height: 1.3
+      &-last
+        padding: 24px
+        text-align: center
+        flex-wrap: wrap
+        &-text
+          width: 100%
+          font-size: 16px
+          line-height: 20px
+          b
+            font-size: 16px
+            line-height: 20px
+            font-weight: bold
+        &-img
+          top: 40px
+  .tarif
+    &-shape
+      &1
+        width: 16px
+        height: 16px
+        top: -25px
+        right: 25px
+    &1
+      &-content
+        padding: 30px 10px
+      &-ps
+        font-size: 12px;
+        line-height: 24px;
+      &-item
+        &-img
+          margin-right: 10px
+        &-text
+          font-size: 16px
+          line-height: 20px
+          font-weight: 300
+          b
+            font-weight: 600
+    &2
+      &-content
+        padding: 30px 10px
+      &-ps
+        font-size: 12px;
+        line-height: 24px;
+  .author
+    &-shape
+      &3
+        width: 16px
+        height: 16px
+        right: 20px
+        top: 50px
+    &-bg
+      width: 634px
+      height: 720px
+    &-img
+      width: 320px
+      margin-left: -30px
+    &-plash
+      transform: rotate(17deg) scale(.75)
+      right: 15px
+    &-text
+      font-size: 14px;
+      line-height: 20px;
+      h3
+        margin-bottom: 28px
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 24px;
+  .review
+    &s
+      &-shape
+        &1
+          width: 16px
+          height: 16px
+          right: 30%
+          top: -80px
+      &-slider
+        display: block
+
+
+
+
+
+
+
+
 

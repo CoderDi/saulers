@@ -22,7 +22,12 @@ $("form").submit(function() {
 
 $(document).ready(function(){
   $(".js-getcall").click(function(){
-    $("#popupCall").addClass("active");
+    $("#popupConsult").addClass("active");
+  });
+  $(".js-gettarif").click(function(){
+    $("#obuchenieTarif").text($(this).data("tarif"));
+    $("#popupObuchenie").find("input[name=Тема]").val("Узнать стоимость тарифа " + $(this).data("tarif"));
+    $("#popupObuchenie").addClass("active");
   });
   
   $(".js-popup-close").on("click", function(){
@@ -42,16 +47,30 @@ $(document).ready(function(){
 
 
 
-
-
-
-  $(".js-reviews-slider").slick({
-    slidesToShow: 3,
-    centerMode: true,
-    dots: true,
-    variableWidth: true,
-    focusOnSelect: true
+  function sliderResize(){
+    if (($(window).innerWidth() > 480)) {
+      if (!($(".js-reviews-slider").hasClass("slick-slider"))){
+        $(".js-reviews-slider").slick({
+          slidesToShow: 3,
+          centerMode: true,
+          dots: true,
+          variableWidth: true,
+          focusOnSelect: true
+        });
+      }
+    } else {
+      if ($(".js-reviews-slider").hasClass("slick-slider")) {
+        $(".js-reviews-slider").slick("unslick")
+      }
+    }
+  }
+  sliderResize();
+  $(window).resize(function(){
+    sliderResize();
   });
+
+
+  
 
   $('.js-reviews2-slider1').slick({
     slidesToShow: 1,
@@ -64,7 +83,18 @@ $(document).ready(function(){
     slidesToScroll: 1,
     asNavFor: '.js-reviews2-slider1',
     fade: true,
-    arrows: false
+    arrows: false,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          arrows: true
+        }
+      }
+    ]
+  });
+  $(".js-reviews2-next").on("click", function(){
+    $('.js-reviews2-slider1').slick("slickNext");
   });
   
 

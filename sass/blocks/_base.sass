@@ -29,6 +29,7 @@
   width: 100%
   overflow: hidden
   position: relative
+  background: url(../images/cep.png) no-repeat left 913px, url(../images/program-bg2.png) no-repeat right 688px
   &::before
     position: absolute
     content: ''
@@ -110,6 +111,7 @@
       text-decoration: underline
 
 .banner
+  position: relative
   padding: 115px 0 30px
   &-title
     width: 100%
@@ -226,11 +228,51 @@
         line-height: 20px;
         color: #000000;
         margin-bottom: 4px
+  &-shape
+    position: absolute
+    z-index: -1
+    border: 1px dashed #686868;
+    opacity: 0.3
+    border-radius: 100%
+    left: 50%
+    top: -666px
+    transform: translateX(-50%)
+    &1
+      width: 1578px;
+      height: 1578px;
+    &2
+      width: 1178px;
+      height: 1178px;
+      top: -467px
+    &3
+      width: 603px
+      height: 245px
+      transform: rotate(29.96deg) translateX(-50%)
+      top: 325px
+      left: 48%
+    &4
+      position: absolute
+      width: 25px
+      height: 25px
+      background: url(../images/icons.svg#star) no-repeat center/contain
+      top: 200px
+      left: calc(50% + 294px)
+    &5
+      top: 423px
+      left: calc(50% - 222px)
+
+
+
+
 
 .program
+  position: relative
+  z-index: 3
   padding: 144px 0 234px
+  overflow: hidden
   &-wrapper
     max-width: 1182px
+    z-index: 2
   &-list
     display: flex
     flex-wrap: wrap
@@ -239,15 +281,18 @@
     width: calc(50% - 16px)
     margin-bottom: 16px
     &-first
-      padding: 0 85px
+      padding: 20px 85px
       display: flex
       align-items: center
     &-last
       display: flex
-      align-items: center
+      align-items: flex-start
       padding-left: 235px
+      padding-top: 30px
       position: relative
       &-text
+        position: relative
+        z-index: 2
         font-weight: 300;
         font-size: 16px;
         line-height: 24px;
@@ -276,7 +321,7 @@
       border-radius: 8px;
       cursor: pointer
       transition: .2s
-      padding: 30px 45px 30px 55px
+      padding: 40px 45px 40px 55px
       display: flex
       height: 100%
       align-items: flex-start
@@ -348,8 +393,6 @@
       color: #000000;
       width: 100%
       display: none
-
-
   &-title
     font-weight: 700;
     font-size: 52px;
@@ -367,7 +410,33 @@
         bottom: 0
         background: #DBD6FF;
         width: 100%
+  &-shape
+    position: absolute
+    width: 938px
+    height: 938px
+    border: 1px dashed #686868;
+    border-radius: 100%
+    left: 50%
+    transform: translateX(-50%)
+    top: calc(100% - 55px)
+    opacity: 0.5
+    &2
+      width: 1178px
+      height: 1178px
+      top: calc(100% - 175px)
+    &3
+      width: 25px
+      height: 25px
+      background: url(../images/icons.svg#star) no-repeat center/contain
+      position: absolute
+      top: -27px
+      left: calc(50% - 175px)
+    &4
+      left: -45px
+      top: 530px
 
+
+  
 .tarif
   &-shape
     position: absolute
@@ -375,26 +444,38 @@
     height: 25px
     background: url(../images/icons.svg#star-white) no-repeat center/contain
     &1
-      top: -30px
-      right: 175px
+      top: -35px
+      right: 195px
     &2
-      left: -130px
-      top: 430px
+      left: -110px
+      top: 415px
   &s
+    position: relative
+    z-index: 2
+    &::before
+      position: absolute
+      content: ''
+      bottom: calc(100% - 200px)
+      left: 50%
+      width: 100%
+      height: 100vh
+      min-width: 1440px
+      transform: translateX(-50%)
+      background: url(../images/program-bg.png) no-repeat center top/100% auto
     &-wrapper
-      max-width: 900px
+      max-width: 946px
     &-container
       position: relative
       background: #090909;
       border-radius: 60px;
-      padding: 75px 0 0
+      padding: 70px 0 0
     &-list
       display: flex
       justify-content: space-between
       align-items: flex-start
     &-title
       text-align: center
-      margin: 0 0 40px
+      margin: 0 0 45px
       font-weight: 700;
       font-size: 32px;
       line-height: 56px;
@@ -419,7 +500,7 @@
       background: #090909;
       backdrop-filter: blur(50px);
       border-radius: 20px;
-      padding: 40px 24px
+      padding: 35px 24px
     &-ps
       display: block
       text-align: center
@@ -452,7 +533,7 @@
       display: block
       height: 56px
       width: 100%
-      margin-bottom: 20px
+      margin-bottom: 15px
       span
         display: none
       img
@@ -461,7 +542,7 @@
         height: 100%
         object-fit: contain
     &-item
-      margin-bottom: 15px
+      margin-bottom: 10px
       display: flex
       align-items: center
       &:last-child
@@ -489,11 +570,11 @@
       border: 1px solid rgba(0, 0, 0, 0.1);
       backdrop-filter: blur(70px);
       border-radius: 20px;
-      padding: 40px 24px
+      padding: 30px 24px
       margin-bottom: 24px
     &-title
       display: block
-      margin-bottom: 20px
+      margin-bottom: 15px
       font-weight: 700;
       font-size: 70px;
       line-height: 56px;
@@ -535,6 +616,7 @@
       line-height: 24px;
       text-align: center
       color: #FFFFFF;
+      cursor: pointer
       &:hover
         background: #000000;
 
@@ -571,6 +653,8 @@
     position: relative
     left: -75px
     margin-bottom: 24px
+    &-mobile
+      display: none
     span
       position: relative
       left: -75px
@@ -620,6 +704,29 @@
         line-height: 24px
         display: block
         font-weight: bold
+  &-shape
+    position: absolute
+    width: 632px
+    height: 632px
+    border-radius: 100%
+    border: 1px dashed #686868;
+    opacity: 0.5
+    top: 61%
+    transform: translateY(-50%)
+    left: calc(100% - 20px)
+    &2
+      width: 462px
+      height: 462px
+      left: calc(100% + 65px)
+    &3
+      width: 25px
+      height: 25px
+      background: url(../images/icons.svg#star) no-repeat center/contain
+      position: absolute
+      top: 295px
+      right: 90px
+
+
 
 .review
   width: 470px
@@ -679,7 +786,22 @@
 
     &-slider
       margin-bottom: 32px
-
+    &-shape
+      position: absolute
+      width: 25px
+      height: 25px
+      background: url(../images/icons.svg#star) no-repeat center/contain
+      position: absolute
+      top: -50px
+      right: 202px
+      &2
+        left: 100px
+        top: auto
+        bottom: -140px
+      &3
+        top: auto
+        bottom: -30px
+        right: -50px
 .slick
   &-arrow
     position: absolute
@@ -756,6 +878,8 @@
       font-size: 12px;
       line-height: 16px;
       color: #000000;
+      &2
+        display: none
   &-right
     text-align: right
   &-politic
@@ -820,6 +944,7 @@
     top: calc(100% - 446px)
     left: 50%
     transform: translateX(-50%)
+    opacity: 0.5
     z-index: -1
   &::after
     top: calc(100% - 695px)
@@ -840,11 +965,31 @@
   background: none
   outline: none
   text-align: center
-  &:focus, &:active
+  &:focus, &:active, &:valid
     border-color: #fff
+    & + .label-span
+      top: 3px
+      font-size: 10px;
+      line-height: 16px;
+      color: rgba(255, 255, 255, .3);
   &::placeholder
     opacity: 1
     color: rgba(255, 255, 255, .4);
+
+.label
+  position: relative
+  display: block
+  &-span
+    position: absolute
+    top: 22px
+    left: 0
+    width: 100%
+    text-align: center
+    color: rgba(255, 255, 255, .4);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    transition: .2s
 
 .submit
   margin: 40px 0 13px
@@ -881,6 +1026,13 @@
       line-height: 24px;
       color: #6360FD;
       cursor: pointer
+      i
+        display: inline-block
+        margin-left: 10px
+        width: 6px
+        height: 10px
+        transform: rotate(180deg)
+        background: url(../images/icons.svg#arrow-review) no-repeat center/contain
       &:hover
         text-decoration: underline
     &-bg
@@ -1007,6 +1159,7 @@
 
 .popup
   position: fixed
+  z-index: 99
   top: 0
   left: 0
   width: 100%
@@ -1016,9 +1169,12 @@
   align-items: center
   opacity: 0
   visibility: hidden
+  transition: .2s
   &.active
     opacity: 1
     visibility: visible
+    .popup-content
+      top: 0
   &-bg
     position: absolute
     top: 0
@@ -1029,7 +1185,9 @@
     opacity: 0.4;
   &-content
     position: relative
+    top: -50px
     z-index: 2
+    transition: .2s
   &-coin
     top: -10px
     left: -60px
@@ -1049,10 +1207,23 @@
         color: #000
         &::placeholder
           color: rgba(0,0,0,.3)
-        &:focus, &:active
+        &:focus, &:active, &:valid
           border-color: #000
+          & + .label-span
+            opacity: 0.3
+            color: #000
       .form
         &-ps
+          color: #000000;
+      .submit:hover
+        background: #000
+        color: #fff
+      .label-span
+        color: #000
+        opacity: 0.4
+      .popup
+        &-title, &-subtitle
+          color: #000000;
           
   &-title
     display: block
@@ -1089,7 +1260,7 @@
 
 
 
-
+ 
 
   
 
