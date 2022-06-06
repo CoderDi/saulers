@@ -257,6 +257,9 @@
             &-arrow
               border: none
               background-size: 15px 25px
+              &:hover
+                background-image: url(../images/icons.svg#slider-arrow) 
+
             &-prev
               left: -50px
             &-next
@@ -299,18 +302,14 @@
     &-ps
       font-size: 10px;
       line-height: 16px;
-
   .input
     height: 56px
     margin-bottom: 8px
-
   .submit
     margin-top: 16px
-
   .label
     &-span
       top: 20px
-
   .footer
     &-flex
       flex-wrap: wrap
@@ -369,6 +368,32 @@
       background-size: 100% 100%
       min-width: 0
       height: 400px
+  .popup
+    &-video
+      width: calc(100vw - 32px)
+      height: 300px
+    &-form
+      width: calc(100vw - 32px)
+      padding: 32px 16px
+    &-title
+      font-size: 16px
+      line-height: 24px
+      margin-bottom: 10px
+    &-subtitle
+      font-size: 13px
+      line-height: 18px
+      margin-bottom: 20px
+      &::after
+        display: none
+    &-coin
+      width: 70px
+      height: 70px
+      left: -20px
+      top: -40px
+  .submit
+    height: 56px
+
+
 
 
 @media screen and (max-width: 480px)
@@ -531,7 +556,10 @@
       height: 720px
     &-img
       width: 320px
-      margin-left: -30px
+      margin: 0 auto
+      img
+        position: relative
+        left: -30px
     &-plash
       transform: rotate(17deg) scale(.75)
       right: 15px
@@ -544,17 +572,73 @@
         font-size: 20px;
         line-height: 24px;
   .review
+    width: 100%
+    height: auto
+    margin-bottom: 16px
+    position: relative
+    &:nth-child(n+4)
+      display: none
+    &-arrow
+      width: 70px
+      height: 70px
+      background-position: 20px center
+      background-size: 40px 40px
     &s
+      padding-bottom: 15px
+      &-show-more
+        display: flex
+        justify-content: center
+        align-items: center
+        text-align: center
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 24px;
+        color: rgba(0,0,0,.4)
+        i
+          display: block
+          width: 5px
+          height: 9px
+          background: url(../images/icons.svg#slider-arrow) no-repeat center/contain
+          transform: rotate(-90deg)
+          margin-left: 8px
+      &-wrapper
+        padding: 0 16px
       &-shape
         &1
           width: 16px
           height: 16px
           right: 30%
           top: -80px
+        &2
+          display: none
       &-slider
         display: block
-
-
+        margin: 0
+      &2
+        &-slide
+          &1
+            &-container
+              padding: 34px 24px
+              &::after
+                right: 30px
+              b
+                font-size: 15px
+                font-weight: 600
+                margin-bottom: 15px
+          &r
+            &1
+              &-coin
+                top: -45px
+            &2
+              width: 220px
+    
+    
+    &-container
+      transform: none
+      height: 184px
+  .footer
+    &-phone
+      font-size: 13px
 
 
 
